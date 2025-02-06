@@ -1,0 +1,37 @@
+name: Format Game Covers and Commit
+on: 
+ workflow_dispatch:
+
+permissions:
+ contents: write
+
+jobs:
+ format-and-commit:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout
+       uses: actions/checkout@v4
+     
+     - name: Setup Node.js
+       uses: actions/setup-node@v4
+       with:
+         node-version: '20'
+     
+     - name: Install dependencies
+       run: |
+         cd server
+         npm i canvas
+         npm i sharp
+
+     - name: Run reformatter
+       run: |
+         cd server
+         node reformat_images.js
+     
+     - name: Commit changes
+       run: |
+         git config --global user.name 'github-actions[bot]'
+         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+         git add static/assets/images/game_covers/
+         git commit -m "Auto-format game covers" || exit 0
+         git push

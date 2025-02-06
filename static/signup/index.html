@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- external (gtag) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJDL65P9Y4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+    
+            gtag('config', 'G-DJDL65P9Y4');
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up for CCPorted to access exclusive features">
+    <link rel="stylesheet" href="/assets/styles/chat.css">
+    <chead title="Signup | CCPorted"/>
+</head>
+<body>
+    <navigation />
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form id="signup-form">
+            <input type="text" id="display-name" placeholder="Display Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+
+    <script src="/assets/scripts/signup.js"></script>
+</body>
+</html>

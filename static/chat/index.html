@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chat with other people on CCPorted.">
+    <chead title = "Chat | CCPorted" />
+    <meta name = "robots" content = "noindex, nofollow">
+    <link rel="stylesheet" href="/assets/styles/chat.css">
+    <script src="/assets/scripts/badFilter.js"></script>
+    <script src="/assets/scripts/badWordList.js"></script>
+    <script src="/assets/scripts/filterXSS.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>CC Ported Chat | <span id = "chat_name"></span></h1>
+    </header>
+    <div class="sidebar l-side-nav">
+        <div class="arrow">→</div>
+        <div class="sidebar-content">
+            <div class = "nonButtons">
+            <h2>Channels</h2>
+            <ul id="channel-list">
+            </ul>
+            </div>
+            <div class="actionButtons">
+                <button id="create-channel-btn">Create Channel</button>
+                <button id="add-channel-btn">Join Channel</button>
+            </div>
+            <div class = "bottomActions actionButtons">
+                <button onclick="window.location.assign('/')">Home</button>
+                <button id="logout-btn">Logout</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <div id="chat-messages">
+                <div class = "empty-message"></div>
+            </div>
+            <form id="message-form">
+                <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="/assets/scripts/chat.js"></script>
+</body>
+
+</html>

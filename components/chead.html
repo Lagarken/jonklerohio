@@ -1,0 +1,33 @@
+<gtag />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1"
+/>
+<link rel="stylesheet" href="/assets/styles/home.css" />
+<link rel="stylesheet" href="/assets/styles/master.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<title>{{title}}</title>
+<script src="/assets/scripts/navigation.js"></script>
+<adBlockDetect />
+
+{% if (ads == "true") %}
+<script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2096280583430267"
+  crossorigin="anonymous"
+></script>
+<link href="/assets/styles/a.css" rel="stylesheet" />
+<script>
+  window.adsEnabled = true;
+</script>
+{% else %}
+<script>
+  window.adsEnabled = false;
+</script>
+{% endif %}

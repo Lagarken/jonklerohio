@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "express": "^4.21.0",
+    "morgan": "^1.10.0",
+    "sharp": "^0.33.5",
+    "stream": "^0.0.3",
+    "unblocker": "^2.3.1"
+  }
+}
